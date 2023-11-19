@@ -26,7 +26,9 @@ export default function getNetworkData(chainId: ChainId): NetworkData {
       symbol: "ETH",
       type: NetworkType.Mainnet,
       rpc: [
-        "https://mainnet.infura.io/v3/"
+        "https://rpc.ankr.com/eth",
+        "https://ethereum.publicnode.com",
+        "https://eth.merkle.io"
       ],
       wrappedAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       scannerURL: "https://etherscan.io/",
@@ -125,7 +127,62 @@ export default function getNetworkData(chainId: ChainId): NetworkData {
       wrappedAddress: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
       scannerURL: "https://avascan.info/blockchain/c/",
       priceFeed: "0x0A77230d17318075983913bC2145DB16C7366156"
-    }
+    },
+    43113: {
+      id: 43113,
+      icon: "chains/avax.png",
+      name: "Fuji Testnet",
+      symbol: "AVAX",
+      type: NetworkType.Testnet,
+      rpc: [
+        "https://rpc.ankr.com/avalanche_fuji",
+        "https://api.avax-test.network/ext/bc/C/rpc"
+      ],
+      wrappedAddress: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+      scannerURL: "https://testnet.snowtrace.io/",
+      priceFeed: "0x0A77230d17318075983913bC2145DB16C7366156"
+    },
+    10: {
+      id: 10,
+      icon: "chains/optimism.png",
+      name: "Optimism",
+      symbol: "ETH",
+      type: NetworkType.Mainnet,
+      rpc: [
+        "https://optimism.blockpi.network/v1/rpc/public"
+      ],
+      wrappedAddress: "0x4200000000000000000000000000000000000006",
+      scannerURL: "https://optimistic.etherscan.io/",
+      priceFeed: "0x13e3Ee699D1909E989722E753853AE30b17e08c5"
+    },
+    420: {
+      id: 420,
+      icon: "chains/optimism.png",
+      name: "Optimism Goerli",
+      symbol: "gETH",
+      type: NetworkType.Testnet,
+      rpc: [
+        "https://endpoints.omniatech.io/v1/op/goerli/public",
+        "https://opt-goerli.g.alchemy.com/v2/demo"
+      ],
+      wrappedAddress: "0x4200000000000000000000000000000000000006",
+      scannerURL: "https://goerli-optimism.etherscan.io/'",
+      priceFeed: "0x13e3Ee699D1909E989722E753853AE30b17e08c5"
+    },
+    1101: {
+      id: 1101,
+      icon: "chains/polygon.png",
+      name: "Polygon zkEVM",
+      symbol: "ETH",
+      type: NetworkType.Mainnet,
+      rpc: [
+        "https://rpc.polygon-zkevm.gateway.fm"
+      ],
+      wrappedAddress: "0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9",
+      scannerURL: "https://zkevm.polygonscan.com/",
+      priceFeed: Constants.zeroAddress
+    },
+
   }
 
   if (!_id || !(_id in chainsManifest)) {

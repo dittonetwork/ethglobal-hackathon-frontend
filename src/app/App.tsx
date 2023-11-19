@@ -28,7 +28,9 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <Wrapper variant={ WrapperVariant.GridFullPage } fullWidth>
+      <Wrapper variant={ WrapperVariant.FlexColumnCenter } fullWidth style={{
+        paddingTop: "8%"
+      }}>
         <Wrapper
           variant={ WrapperVariant.FlexColumnCenter }
           gap={ 20 }

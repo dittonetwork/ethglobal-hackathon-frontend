@@ -6,6 +6,8 @@ import "./index.scss"
 import App from "@/app/App"
 import WalletConnector from "@/widgets/WalletConnector"
 
+console.log("Application initialized")
+
 configure({
   enforceActions: "never"
 })
