@@ -1,0 +1,11 @@
+div.icon-stack {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+
+  --iconSize: 24px;
+
+  .icon:not(:last-child) {
+    margin-left: calc(-1 * var(--iconSize) / 2);
+  }
+}

@@ -1,0 +1,33 @@
+.wrapper.block {
+  border-radius: var(--borderRadius16);
+  border: 1px solid var(--strokeFirstColor);
+  padding: 16px;
+  background: var(--whiteSecondColor);
+
+  &__wrapper {
+    overflow: hidden;
+
+    .typography-text {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    & > .wrapper.block {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--strokeFirstColor);
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

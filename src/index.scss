@@ -1,0 +1,197 @@
+@import "~@opendapps/modal-window/dist/modal-window.css";
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+* {
+  font-weight: 500;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  box-sizing: border-box !important;
+}
+
+#root {
+  height: 100%;
+
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+// Color schema
+
+body {
+  --white: white;
+  --black: black;
+
+  --blackFirstColor: #202020;
+  --blackSecondColor: #383838;
+  --whiteFirstColor: #FDFDFD;
+  --whiteSecondColor: #f9f9f9;
+  --whiteSecondColorHover: #efefef;
+
+  --strokeFirstColor: #e3e3e3;
+
+  --historyFirstColor: #eaeaea;
+  --historySecondColor: #f1f1f1;
+
+  --greyFirstColor: #525252;
+  --greySecondColor: #BBBBBB;
+  --greenFirstColor: #00C471;
+  --greenFirstColorDarken: #00a45f;
+  --greenSecondColor: #F3FFFA;
+  --successColor: #079455;
+  --errorColor: #D12B1F;
+  --secondErrorColor: #fff8f8;
+  --triggerColor: #FF9900;
+  --secondTriggerColor: #fffaf3;
+  --actionColor: #925EE7;
+  --actionSecondColor: #faf6ff;
+  --buttonHoverColor: #00DA7F;
+
+  --buttonBorderRadius: 8px;
+  --buttonTransition: 150ms ease all;
+  --borderRadius12: 12px;
+  --borderRadius16: 16px;
+}
+
+*[class~="color:yellow"] {
+  color: var(--triggerColor);
+}
+
+*[class~="color:grey1"] {
+  color: var(--greyFirstColor);
+}
+
+*[class~="color:grey2"] {
+  color: var(--greySecondColor);
+}
+
+*[class~="color:red"] {
+  color: var(--errorColor);
+}
+
+*[class~="color:half-black"] {
+  color: var(--black);
+  opacity: 0.5;
+}
+
+*[class~="hover-animation:shake"] {
+  @keyframes shake {
+    0% {
+      transform: translateX(-2px);
+    }
+    25% {
+      transform: translateX(2px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(-2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover {
+    animation: 200ms ease shake forwards;
+  }
+}
+
+*[class~="hover-animation:rotate"] {
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover {
+    animation: 200ms ease-out rotate;
+  }
+}
+
+*[class~="hover-animation:rotate-full"] {
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    animation: 200ms ease-out rotate;
+  }
+}
+
+*[class~="hover-animation:left-right-rotate"] {
+  @keyframes rotate-lr {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  &:hover {
+    animation: 300ms ease rotate-lr;
+  }
+}
+
+*[class~="hover-animation:left-rotate"] {
+  @keyframes rotate-l {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  &:hover {
+    animation: 250ms ease rotate-l;
+  }
+}
+
+*[class~="color:green"] {
+  color: var(--greenFirstColor);
+}
+
+.od-modal-window {
+  .od-modal-window-container {
+    border-radius: 24px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 24px;
+
+    max-height: calc(100% - 40px);
+    max-width: 640px;
+    min-width: 300px;
+    gap: 25px;
+  }
+}

@@ -1,0 +1,105 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 20px;
+  background-color: var(--greenFirstColor);
+
+  font-size: 16px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: var(--buttonBorderRadius);
+
+  transition: var(--buttonTransition);
+
+  gap: 8px;
+
+  span.typography-text, div.icon {
+    transition: var(--buttonTransition);
+    padding: 0;
+    background: transparent;
+  }
+
+  & > div, & > span {
+    pointer-events: none;
+  }
+
+  &:hover, &.active {
+    background: var(--buttonHoverColor);
+    color: var(--white);
+  }
+
+  div.loader {
+    position: absolute;
+    margin: auto;
+
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+
+    transition: var(--buttonTransition);
+  }
+
+  &.loading {
+    cursor: not-allowed;
+    background: var(--greenFirstColor);
+
+    span.typography-text, div.icon {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+
+    div.loader {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  &.default {
+    color: var(--white);
+  }
+
+  &.transparent-bg {
+    border: 1px solid var(--greenFirstColor);
+    background: var(--greenSecondColor);
+    color: var(--greenFirstColor);
+
+    &:hover, &.loading, &.active {
+      background: var(--buttonHoverColor);
+      color: var(--white);
+      border-color: var(--buttonHoverColor);
+    }
+  }
+
+  &.transparent-bg-red {
+    border: 1px solid var(--errorColor);
+    background: var(--secondErrorColor);
+    color: var(--errorColor);
+
+    &:hover, &.loading, &.active {
+      background: var(--errorColor);
+      color: var(--white);
+      border-color: var(--errorColor);
+    }
+  }
+
+  &.transparent-bg-yellow {
+    border: 1px solid var(--triggerColor);
+    background: var(--secondTriggerColor);
+    color: var(--triggerColor);
+
+    &:hover, &.loading, &.active {
+      background: var(--triggerColor);
+      color: var(--white);
+      border-color: var(--triggerColor);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+}

@@ -1,0 +1,66 @@
+.tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: var(--whiteSecondColor);
+  border-radius: var(--buttonBorderRadius);
+  overflow: hidden;
+
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+
+  .tooltip {
+    width: 100% !important;
+    min-width: fit-content;
+  }
+
+  &__tab {
+    border-radius: inherit;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    width: 100% !important;
+    min-width: fit-content;
+
+    transition: 100ms ease all;
+    cursor: pointer;
+    gap: 5px;
+
+    &-badge {
+      font-size: 10px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-width: 18px;
+      height: 18px;
+      width: fit-content;
+      padding: 0 3px;
+
+      background: var(--strokeFirstColor);
+      border-radius: 6px;
+    }
+
+    &.selected {
+      background: var(--greenFirstColor);
+      color: var(--white);
+
+      .tabs__tab-badge {
+        background: var(--greenFirstColorDarken);
+      }
+    }
+
+    &:not(.selected) {
+      opacity: 0.5;
+    }
+
+    &.disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
+  }
+}

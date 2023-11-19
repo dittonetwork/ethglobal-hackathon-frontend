@@ -1,0 +1,20 @@
+.wrapper.text-block {
+  padding: 16px;
+  border-radius: 16px;
+
+  border: 1px solid var(--greenFirstColor);
+  background: var(--greenSecondColor);
+  color: var(--greenFirstColor);
+
+  &.warning {
+    border: 1px solid var(--triggerColor);
+    background: var(--secondTriggerColor);
+    color: var(--triggerColor);
+  }
+
+  &.error {
+    border: 1px solid var(--errorColor);
+    background: var(--secondErrorColor);
+    color: var(--errorColor);
+  }
+}

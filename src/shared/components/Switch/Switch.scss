@@ -1,0 +1,34 @@
+.switch {
+  cursor: pointer;
+
+  &__block {
+    width: 44px;
+    height: 28px;
+    border-radius: 8px;
+    min-width: 44px;
+
+    background: var(--whiteSecondColor);
+    border: 1px solid var(--greySecondColor);
+  }
+
+  &__circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+
+    background: var(--greySecondColor);
+    transition: var(--buttonTransition);
+  }
+
+  &.selected {
+    .switch__circle {
+      background: var(--greenFirstColor);
+      transform: translateX(16px);
+    }
+
+    .switch__block {
+      background: var(--greenSecondColor);
+      border-color: var(--greenFirstColor);
+    }
+  }
+}

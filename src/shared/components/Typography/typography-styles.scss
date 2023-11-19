@@ -1,0 +1,89 @@
+.typography-text {
+  all: unset;
+  color: inherit;
+
+  &.scale-default {
+    font-size: 16px;
+
+    &.default {
+      line-height: 150%;
+      font-weight: 400;
+    }
+
+    &.medium {
+      line-height: 150%;
+      font-weight: 500;
+    }
+
+    &.button {
+      line-height: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &.scale-small {
+    font-size: 14px;
+
+    &.default {
+      line-height: 140%;
+      font-weight: 400;
+    }
+
+    &.medium {
+      font-weight: 500;
+    }
+
+    &.bold {
+      font-weight: 700;
+    }
+
+    &.button {
+      font-weight: 600;
+      line-height: 20;
+    }
+  }
+}
+
+.typography-heading {
+  all: unset;
+  color: inherit;
+
+  &.large {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+
+  &.medium {
+    font-weight: 500;
+    line-height: 140%;
+    font-size: 24px;
+  }
+
+  &.small {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
+
+.typography-caption {
+  all: unset;
+  color: inherit;
+
+  &.medium, &.medium-bold {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &.medium-bold {
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &.small {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+}

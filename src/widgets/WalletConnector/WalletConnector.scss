@@ -1,0 +1,35 @@
+.od-modal-window.wallet-connector {
+  .od-modal-window-container {
+    width: min(400px, 100%);
+
+    .wcc {
+      &__button {
+        padding: 20px;
+        cursor: pointer;
+        transition: var(--buttonTransition);
+        border-radius: var(--buttonBorderRadius);
+        background: var(--whiteSecondColor);
+
+        &:hover, &.selected {
+          background: var(--greenFirstColor);
+          color: var(--white);
+        }
+
+        &.disabled {
+          opacity: 0.75;
+          pointer-events: none;
+        }
+
+        &.selected {
+          opacity: 1;
+          background: var(--greenFirstColor);
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    align-items: flex-end !important;
+  }
+}
